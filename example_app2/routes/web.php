@@ -30,7 +30,8 @@ use Illuminate\Http\Request;
     Route::get('/blog2', function (Request $request1) {
         return [
             //"name" => $_GET['name'], // Pour recevoir le nom entré dans le navigateur
-            "name" => $request1 -> path(),
+            // "name" => $request1 -> path(), // path renvoie le chemin courant
+            "name" => $request1 -> url(),
             "articles" => "Article 1"
         ];
     });
