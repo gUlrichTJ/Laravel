@@ -19,7 +19,9 @@ Route::get('/', function () {
 
 // Mettre une autre route pour blog
 Route::get('/blog', function () {
-    return 'welcome';
+    return [
+        "article" => "Article 1"
+    ];
 });
 
 // Mettre une route pour TJ
