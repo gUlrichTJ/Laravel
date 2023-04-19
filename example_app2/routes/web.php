@@ -38,3 +38,12 @@ use Illuminate\Http\Request;
             "articles" => "Article 1"
         ];
     });
+
+    // Autre route pour article1
+    Route::get('/articles1', function () {
+        $name = 'God';
+        return [
+            "name" -> input('name'), 
+            "articles" => "Article 1"
+        ];
+    })
