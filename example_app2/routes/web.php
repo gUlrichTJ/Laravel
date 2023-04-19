@@ -25,6 +25,16 @@ use Illuminate\Http\Request;
     );
     }
 );
+
+    // Ici, nous allons recueillir le nom entré dans le navigateur
+    Route::get('/blog2', function (Request $request1) {
+        return [
+            //"name" => $_GET['name'], // Pour recevoir le nom entré dans le navigateur
+            "name" => $request1 -> path(),
+            "articles" => "Article 1"
+        ];
+    });
+
     // Une autre route pour les articles
     Route::get('/articles', function (Request $request) {
         // var_dump($request);   // var_dump() est une fonction en PHP qui affiche des informations structurées sur une variable, y compris son type de données, sa longueur et son contenu. Elle est utile pour déboguer des scripts PHP et pour comprendre comment une variable est structurée.
