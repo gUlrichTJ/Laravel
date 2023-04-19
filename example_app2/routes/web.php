@@ -73,4 +73,7 @@ use Illuminate\Http\Request;
             "slug" => $slug,
             "id" => $id
         ];
-    });
+    })-> where([
+        'id' => '[0-9]+',
+        'slug' => '[A-Za-z0-9\-]+'
+    ]);
