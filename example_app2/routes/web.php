@@ -31,7 +31,8 @@ use Illuminate\Http\Request;
         return [
             //"name" => $_GET['name'], // Pour recevoir le nom entré dans le navigateur
             // "name" => $request1 -> path(), // path renvoie le chemin courant
-            "name" => $request1 -> url(),
+            // "name" => $request1 -> url(), // Renvoie l'url courant
+            "name" => $request1 -> all(),
             "articles" => "Article 1"
         ];
     });
