@@ -46,4 +46,4 @@ use Illuminate\Http\Request;
             "name" -> input('name'), 
             "articles" => "Article 1"
         ];
-    })
+    });
