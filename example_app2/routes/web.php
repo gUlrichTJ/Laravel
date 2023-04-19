@@ -29,7 +29,7 @@ use Illuminate\Support\Facades\Route;
         // Nous créons une variable name
         $name = isset($_GET['name']) ? $_GET['name'] : "";
         return [
-            "name" => $_GET['name'],
+            "name" => $name,
             "articles" => "Article 1"
         ];
     });
