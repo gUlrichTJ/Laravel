@@ -68,6 +68,9 @@ use Illuminate\Http\Request;
         return "Bonjour";
     });
     */
+
+    // <pre><code></code></pre> pour écrire du code dans une page web
+
     Route::get('/blog/{slug}-{id}', function (string $slug, string $id) {
         return [
             "slug" => $slug,
@@ -77,3 +80,4 @@ use Illuminate\Http\Request;
         'id' => '[0-9]+',
         'slug' => '[A-Za-z0-9\-]+'
     ]);
+
