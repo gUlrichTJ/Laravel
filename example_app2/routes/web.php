@@ -34,7 +34,7 @@ use Illuminate\Http\Request;
             // "name" => $request1 -> url(), // Renvoie l'url courant
             // "name" => $request1 -> all(), // Donne toutes les informations
                                              // Comme le nom, l'âge, la taille, le sexe
-            "name" => $request1 -> input('name'),
+            "name" => $request1 -> input('age'),
             "articles" => "Article 1"
         ];
     });
@@ -61,3 +61,5 @@ use Illuminate\Http\Request;
             "articles" => "Article 1"
         ];
     });
+
+    // Découverte d'une nouvelle route pour slug
