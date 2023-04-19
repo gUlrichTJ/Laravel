@@ -63,3 +63,6 @@ use Illuminate\Http\Request;
     });
 
     // Découverte d'une nouvelle route pour slug
+    Route::get('/blog/{slug}-{id}', function () {
+        return "Bonjour";
+    });
