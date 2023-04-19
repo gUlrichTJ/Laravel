@@ -27,7 +27,6 @@ use Illuminate\Support\Facades\Route;
     // Une autre route pour les articles
     Route::get('/articles', function () {
         return [
-            "articles" => "Article 1",
-            "boîtes" => "Boîte 1"
+            "articles" => "Article 1"
         ];
     });
