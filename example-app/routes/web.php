@@ -17,8 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Mettre une autre route
+// Mettre une autre route pour blog
 Route::get('/blog', function () {
-    return view('welcome');
+    return 'welcome';
 });
+
+// Mettre une route pour TJ
+Route::get('/TJ', function () {
+    return "Hello how are you ?";
+})
 ?>
