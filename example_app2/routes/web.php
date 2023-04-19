@@ -71,10 +71,18 @@ use Illuminate\Http\Request;
 
     // <pre><code></code></pre> pour écrire du code dans une page web
 
-    Route::get('/blog/{slug}-{id}', function (string $slug, string $id) {
+    // Redirection vers un article particulier
+    Route::get('/blog3/{slug}-{id}', function (Request $request) {
+        return [
+            "link" => "/blog/mon-premier-article-12"
+        ];
+    })-> blog.index;    // Pour donner un nom à la route
+
+    Route::get('/blog/{slug}-{id}', function (string $slug, string $id, Request $request) {
         return [
             "slug" => $slug,
-            "id" => $id
+            "id" => $id,
+            "name" => $request -> input('name')
         ];
     })-> where([
         'id' => '[0-9]+',
