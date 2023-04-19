@@ -26,6 +26,8 @@ use Illuminate\Support\Facades\Route;
 );
     // Une autre route pour les articles
     Route::get('/articles', function () {
+        // Nous créons une variable name
+        $name = isset($_GET['name']) ? $_GET['name'] : "";
         return [
             "name" => $_GET['name'],
             "articles" => "Article 1"
