@@ -32,7 +32,9 @@ use Illuminate\Http\Request;
             //"name" => $_GET['name'], // Pour recevoir le nom entré dans le navigateur
             // "name" => $request1 -> path(), // path renvoie le chemin courant
             // "name" => $request1 -> url(), // Renvoie l'url courant
-            "name" => $request1 -> all(),
+            // "name" => $request1 -> all(), // Donne toutes les informations
+                                             // Comme le nom, l'âge, la taille, le sexe
+            "name" => $request1 -> input('name'),
             "articles" => "Article 1"
         ];
     });
