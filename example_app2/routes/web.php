@@ -40,10 +40,10 @@ use Illuminate\Http\Request;
     });
 
     // Autre route pour article1
-    Route::get('/articles1', function () {
+    Route::get('/articles1', function (Request $request) {
         $name = 'God';
         return [
-            "name" -> input('name'), 
+            "name" => $request -> input('name', 'God\'s team'), 
             "articles" => "Article 1"
         ];
     });
