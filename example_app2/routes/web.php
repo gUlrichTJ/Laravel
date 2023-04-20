@@ -74,7 +74,7 @@ use Illuminate\Http\Request;
     // Redirection vers un article particulier
     Route::get('/blog3/{slug}-{id}', function (Request $request) {
         return [
-            "link" => "/blog/mon-premier-article-12"
+            "link" => \route('blog.show', ['slug' => 'articla', 'id' => 14])    // "/blog/mon-premier-article-12"
         ];
     })-> blog.index;    // Pour donner un nom à la route
 
@@ -87,5 +87,5 @@ use Illuminate\Http\Request;
     })-> where([
         'id' => '[0-9]+',
         'slug' => '[A-Za-z0-9\-]+'
-    ]);
+    ])-> blog.show;
 
