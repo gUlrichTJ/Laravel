@@ -70,6 +70,7 @@ use Illuminate\Http\Request;
     */
 
     // <pre><code></code></pre> pour écrire du code dans une page web
+    // I learn php.
 
     // Redirection vers un article particulier
     Route::get('/blog3/{slug}-{id}', function (Request $request) {
